@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>flex</title>
+<style>
+.grid{
+	width:100%;
+	height:200px;
+	background: gray;
+	display: flex;
+	flex-wrap: wrap;/*换行*/
+	align-content: space-around;/*每个项目两侧的间隔相等*/
+	overflow: hidden;
+	}
+.grid .row{
+	display: flex;
+	flex-basis: 100%;/*每一行都占满100%*/
+	justify-content: space-around;
+	}
+.row .column{
+	text-align: center;
+	background:white;
+	border:1px solid red;
+	border-radius: 5px;
+	padding:15px;
+	margin:0 5px;
+	}
+.row:nth-child(1) .column{
+	flex:1;
+}
+.row:nth-child(1) .column:nth-child(1){
+	flex:0 0 50%;
+}
+
+.row:nth-child(2) .column{
+	flex:1;
+}
+.row:nth-child(2) .column:nth-child(2){
+	flex:0 0 33.3%;
+}
+
+.row:nth-child(3) .column{
+	flex:1;
+}
+.row:nth-child(3) .column:nth-child(1){
+	flex:0 0 25%;
+}
+.row:nth-child(3) .column:nth-child(3){
+	flex:0 0 33.3%;
+}
+</style>
+</head>
+<body>
+<div class="grid">
+	<div class="row">
+		<div class="column">1/2</div>
+		<div class="column">auto</div>
+		<div class="column">auto</div>
+	</div>
+	<div class="row">
+		<div class="column">auto</div>
+		<div class="column">1/3</div>
+	</div>
+	<div class="row">
+		<div class="column">1/4</div>
+		<div class="column">auto</div>
+		<div class="column">1/3</div>
+	</div>
+</div>
+</body>
+</html>

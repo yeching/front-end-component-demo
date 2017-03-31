@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>轿运联盟</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<style type="text/css">
+.login-header{
+	display: flex;
+	height:8vh;
+	background:white;
+	border-bottom:1px solid gainsboro;
+	box-sizing: border-box;
+	padding:0.2rem;
+	align-items: center;
+	}
+.login-header a{
+	width:50%;
+	text-align: center;
+	font-size:1.4rem;
+}
+.login-active{color:#E30735;}
+.login-header span{color:gray;line-height:8vh;}	
+
+.login-form{
+	display:flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding:0.5rem;
+	background:gainsboro;
+}
+.login-form input[type="text"],input[type="password"]{
+	padding:0.6rem;
+	padding-left:3rem;
+	margin-bottom:0.4rem;
+	border:1px solid transparent;
+	border-radius:3px;
+}
+.login-form>input.user-icon{
+	background:#fff url(../img/user-icon.png) no-repeat center left;
+	background-position: 10px;
+	background-size:24px 24px!important;
+	}
+.login-form>input[type="password"]{
+	background:#fff url(../img/password-icon.png) no-repeat center left;
+	background-position: 10px;
+	background-size:24px 24px!important;
+	}
+.login-form>input.mobile-icon{
+	background:#fff url(../img/mobile-icon.png) no-repeat center left;
+	background-position: 10px;
+	background-size:24px 24px!important;
+	}
+.login-form .surelogin{
+	display: flex;
+	justify-content: space-between;
+}	
+.login-form .surelogin input.mobilesure-icon{
+	background:#fff url(../img/mobilesure-icon.png) no-repeat center left;
+	background-position: 10px;
+	background-size:24px 24px!important;
+	flex:auto;
+	margin-right:0.5rem;
+	}		
+.login-form .surelogin input[type="button"]{
+	padding:0.5rem;
+	color:#fff;
+	border:1px solid transparent;
+	background:#E30735;
+	border-radius:2px;
+	align-self:flex-start;
+	margin-top:1px;
+}
+
+.login-form .checklogin {
+	display: flex;
+	padding:0.6rem;
+	align-items: center;
+}
+
+.login-form .checklogin input{margin-right:0.5rem;}
+.login-form .checklogin a{color:#7dc5eb;}
+
+.login-form>input[type="button"]{
+	box-sizing: border-box;
+	display: block;
+	width:100%;
+	padding:0.6rem;
+	background:#E30735;
+	border:1px solid transparent;
+	border-radius: 2px;
+	color:#fff;
+	font-weight:bold;
+	font-size:1.2rem;
+	}
+.login-form .lostpwd{
+	align-self:flex-end;
+	color:#7dc5eb;
+	margin-bottom:0.5rem;
+	}
+</style>
+ </head>
+ 
+<body>
+
+<div class="article-content">
+	<form id='login-form' class="login-form">
+		<input type="text" class="user-icon" placeholder="请设置用户名">
+		<input type="password"  placeholder="请输入密码">
+		<input type="password"  placeholder="请再次输入密码">
+		<input type="text" class="mobile-icon" placeholder="请输入您的手机号">	
+		<div class="surelogin">
+			<input type="text" class="mobilesure-icon" placeholder="请输入手机验证码">
+			<input type="button" value="发送验证码">
+		</div>		
+		<div class="checklogin">
+			<input type="checkbox" />
+			<span>阅读并同意</span>
+			<a href="#">《轿运联盟注册协议》</a>
+		</div>
+		<input type="button" value="立即注册" />
+	</form>
+</div>
+</body>
+</html>
